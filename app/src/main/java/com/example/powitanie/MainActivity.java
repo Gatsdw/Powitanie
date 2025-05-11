@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         eti = findViewById(R.id.editTextImie);
         Button btn = findViewById(R.id.buttonPrzywitanie);
 
-        createNotificationChannel(); // utwórz kanał powiadomień
+        createNotificationChannel();
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 public void onClick(DialogInterface dialogInterface, int i) {
                     NotificationCompat.Builder notificationBuilder =
                             new NotificationCompat.Builder(MainActivity.this, chan)
-                                    .setSmallIcon(R.drawable.notification_icon) // upewnij się, że masz taki zasób
+                                    .setSmallIcon(R.drawable.notification_icon)
                                     .setContentTitle("Witaj!")
                                     .setContentText("Miło Cię widzieć, " + input + "!")
                                     .setPriority(NotificationCompat.PRIORITY_DEFAULT);
